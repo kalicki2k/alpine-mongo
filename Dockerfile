@@ -9,6 +9,9 @@ RUN apk update && apk upgrade && \
     chmod +x /run.sh && \
     rm -rf /var/cache/apk/*
 
+# Expose ports.
+#   - 27017: process
+#   - 28017: http
 EXPOSE 27017 28017
 
 ENTRYPOINT ["/run.sh"]
